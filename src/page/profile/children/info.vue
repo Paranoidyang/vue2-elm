@@ -3,15 +3,19 @@
         <head-top head-title="账户信息" go-back='true'></head-top>
         <section class="profile-info">
             <section class="headportrait">
+            <!-- 有上传功能的input -->
                 <input type="file" class="profileinfopanel-upload" @change="uploadAvatar">
                 <h2>头像</h2>
                 <div class="headportrait-div">
+                    <!-- 如果能够获得用户信息，就显示用户上传的头像 -->
                     <img  v-if="userInfo" :src="imgBaseUrl + userInfo.avatar" class="headportrait-div-top">
+                    <!-- 默认头像 -->
                     <span class="headportrait-div-top" v-else>
                         <svg>
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#avatar-default"></use>
                         </svg>
                     </span>
+                    <!-- 向右的箭头 -->
                     <span class="headportrait-div-bottom">
                         <svg fill="#d8d8d8">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>

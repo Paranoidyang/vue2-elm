@@ -170,7 +170,7 @@
                 if (!this.userInfo.user_id) {
                     this.showAlert = true;
                     this.alertText = this.userInfo.message;
-                    if (!this.loginWay) this.getCaptchaCode();
+                    if (!this.loginWay) this.getCaptchaCode();//如果是密码登录，则重新获取验证码
                 }else{
                     this.RECORD_USERINFO(this.userInfo);
                     this.$router.go(-1);
