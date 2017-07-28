@@ -1,6 +1,6 @@
 <template>
   	<div>
-        <head-top signin-up='home'>
+        <head-top signin-up='true'>
             <span slot='logo' class="head_logo"  @click="reload">ele.me</span>
         </head-top>
         <nav class="city_nav">
